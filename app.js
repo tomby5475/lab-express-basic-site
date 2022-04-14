@@ -2,24 +2,23 @@ const express = require('express')
 const app = express()
 const port = 3003
 
-console.log(__dirname + '/views/home.html');
 
 app.use(express.static(__dirname + '/public'))
 
 app.get('/', function (req, res) {
-    res.sendFile(__dirname + '/views/home.html')
+    res.sendFile(__dirname + '/views3/home.html')
 })
 
 app.get('/family', function (req, res) {
-    res.sendFile(__dirname + '/views/family.html')
+    res.sendFile(__dirname + '/views3/family.html')
 })
 
 app.get('/films', function (req, res) {
-    res.sendFile(__dirname + '/views/films.html')
+    res.sendFile(__dirname + '/views3/films.html')
 })
 
 app.get('/favBooks', function (req, res) {
-    res.sendFile(__dirname + '/views/favBooks.html')
+    res.sendFile(__dirname + '/views3/favBooks.html')
 })
 
 app.listen(port, () => {
